@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Courier New", monospace;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #37323E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    position: absolute;
+    width: 30rem;
+    height: 15rem;
+    background-color: #DEB841;
+    border-radius: 7.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.button span {
+    position: relative;
+    color: #37323E;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.ripple {
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: #DE9E36;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rippleAnim 0.5s forwards;
+}
+
+@keyframes rippleAnim {
+    0% {
+        width: 0;
+        height: 0;
+
+    }
+    100% {
+        width: 220%;
+        height: 220%;
+    }
+    
+}
